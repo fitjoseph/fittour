@@ -10,7 +10,6 @@ Fonts
 Variables
 ===============
 */
-
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(184, 91%, 17%);
@@ -286,6 +285,11 @@ HERO
   display: flex;
   justify-content: center;
   align-items: center;
+  background:linear-gradient(rgb(44,174,186,0.7), rgba(0,0,0,0.7)) ,url(/images/main.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
 }
 .hero-banner{
   text-align: center;
@@ -314,12 +318,6 @@ HERO
   border-color: #fff;
 }
 @media screen and (min-width: 600px) {
-  .hero{
-    background:linear-gradient(rgb(44,174,186,0.7), rgba(0,0,0,0.7)) ,url(/images/main.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   .hero-banner{
     padding: 0 20px;
   }
@@ -540,12 +538,17 @@ CONTACT
   font-size: medium;
   background: var(--clr-primary-8);
   color: var(--clr-grey-1);
-  margin-left: 5px;
+  margin-top: 5px;
 }
 .btn-submit:hover{
   background: var(--clr-primary-1);
   color: var(--clr-primary-10);
   cursor: pointer;
+}
+@media screen and (min-width:480px) {
+  .btn-submit{
+    margin-left: 5px;
+  }
 }
 @media screen and (min-width:700px) {
   .contact-center{
@@ -559,6 +562,9 @@ CONTACT
   .form-control{
     width: 26rem;
     margin-left: 2.5rem;
+  }
+  .btn-submit{
+    margin-left: 5px;
   }
 }
 /*
@@ -616,6 +622,7 @@ FOOTER
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding: 0.8rem 2rem 1rem;
 }
 .footer-links, 
 .footer-icons{
@@ -623,25 +630,22 @@ FOOTER
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 1.5rem;
-
-  
 }
 .footer-link{
   color: var(--awhite);
   text-transform: capitalize;
-  font-size: 1rem;
+  font-size: 0.95rem;
   justify-content: space-around;
   letter-spacing: var(--a-spacing);
   transition: var(--a-transition);
   margin-right: 1rem;
-  
 }
 .footer-link:hover{
   color: var(--aclr-primary-5);
 }
 .footer-icon{
   color: var(--clr-primary-8);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   justify-content: space-between;
   margin-right: 1rem;
 }
@@ -651,6 +655,6 @@ FOOTER
 .copyright{
   color: var(--awhite);
   text-transform: capitalize;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: var(--a-spacing);
 }
